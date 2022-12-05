@@ -1,0 +1,59 @@
+.seatSelection{
+    top: 0;
+    left:0;
+    display:grid; 
+    position: absolute;
+    grid-template-columns:repeat(3, 1fr);
+    text-align:center;
+    justify-content: center;
+    width:100vw;
+    height:100vh;
+    margin:2rem 0rem 0rem 0rem;
+    background:rgba(0, 0, 0, 0.600);
+    border: 1px solid gray;
+    z-index: 3;
+    transition: 4ms ease in;
+}
+
+.checkBox{
+    text-align: center;
+    justify-content: center;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    height: 80vh;
+    top: 2rem;
+    /* left: 22rem; */
+    background:  white;
+    border:  1px solid gray;
+    border-radius: 0.5rem;
+    padding:  2rem 0rem 0rem 5rem;
+    margin:  0rem 0rem 0rem 18rem;
+    position:  relative;
+}
+
+.viewSeats{
+    border: 1px solid gray; 
+    padding: 0.3rem;
+    border-radius:  0.3rem;
+    margin: 1rem 0rem 0rem 0rem;
+    width: 90%;
+}
+.reserveSeats{
+    border: 1px solid gray; 
+    padding: 0.3rem;
+    border-radius:  0.3rem;
+    margin: 0.5rem 0rem 0rem 4rem;
+    width: 160%;
+    height: 3rem
+}
+.closeSeats{
+    border: 1px solid gray; 
+    padding: 0.3rem;
+    border-radius:  0.3rem;
+    margin: 5rem 0rem 0rem 0rem;
+    width: 100%;
+    height: 3rem;
+    /* top: 0;
+    right: 0; */
+}

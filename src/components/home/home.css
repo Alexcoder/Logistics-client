@@ -1,0 +1,12 @@
+
+
+.homeContainer> div{
+/* background-image: url(https://enlightphoto.com/wp-content/uploads/2020/09/ssku-2113_1200.jpg); */
+background-image: url('../../images/GIG.png');
+/* background-image: url(https://images.unsplash.com/photo-1519817914152-22d216bb9170?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHJvYWR8ZW58MHx8MHx8&w=1000&q=80); */
+ /* background: linear-gradient(rgba(0, 0, 0, 0.600), black); */;
+ background-color: #cccccc;
+ background-position: center; /* Center the image */
+ background-repeat: no-repeat; /* Do not repeat the image */
+ background-size: cover; 
+}

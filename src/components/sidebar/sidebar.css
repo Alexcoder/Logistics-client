@@ -1,0 +1,17 @@
+
+#sidebarContainer{
+  margin: 0rem 17rem 0rem 0rem
+}
+
+#sidebarContainer >div{
+    width: 17rem;
+    gap: 1rem;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    transition: width 2s;
+    flex-direction: column;
+    border-right: 1px solid gray;
+    background: linear-gradient(to bottom right, rgba(0.5, 0.3,3, 0.6), blue);
+    margin: 0rem 0rem 0rem 0rem
+}
