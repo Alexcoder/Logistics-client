@@ -11,7 +11,7 @@ import './home.css'
 const Home=()=>{
     const {welcome,}= useSelector((state)=> state.auth)
     const { bookDetail, setBookDetail, user,booking, setBooking,trip, setTrip, FormatDate }= useGlobalState();
-    const { departureTerminal,arrivalTerminal, adults, seat, date}= bookDetail;
+    const { departureTerminal,arrivalTerminal, adults, date}= bookDetail;
     
     const navigate = useNavigate()
     const creator = user?.id

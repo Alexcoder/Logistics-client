@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useGlobalState } from "../../state/context";
 import {adminGetVehicleQuery } from '../actions/actions';
+// import {AiOutlineRollback} from 'react-icons/ai';
+// import {IoArrowBackOutline} from 'react-icons/io'
+import {IoIosArrowBack} from 'react-icons/io'
 import GIG2 from '../../images/GIG2.png'
 import './selectBus.css';
 
@@ -108,12 +111,10 @@ const SelectBus =()=>{
                                 </span>
                                       {p.arrivalTerminal}  
                            </div>
-                            {/* <div> {date} </div> */}
                             <div>Name :  {` ${user?.firstName} ${user?.lastName}`} </div>
                             <div> Booking Number : {bookingNumber}</div>
                             <div>Adults(s)  :  {adults} </div>
                             <div>Amount : NGN {Intl.NumberFormat().format(p.price)}.00</div>
-                            {/* <div>Amount : NGN {Intl.NumberFormat().format(p.price*adults)}.00</div> */}
                             <button 
                             className="viewSeats"
                             onClick={handleOpen}>
@@ -122,6 +123,8 @@ const SelectBus =()=>{
               {/* SEAT SELECTION */}
               {viewSeats &&
               <div className="seatSelection">
+                <div>
+                  <button>close</button>
                     <div className="checkBox">
                         {
                         p.seatNumber.map((t)=>(
@@ -143,8 +146,9 @@ const SelectBus =()=>{
                         className="reserveSeats">Reserve Seat</button>
                         <button
                         onClick={()=> setViewSeats(false)}
-                        className="closeSeats">Close Seats</button>
+                        className="closeSeats"><IoIosArrowBack/></button>
                     </div> 
+                </div> 
               </div> 
             //   : null
              }

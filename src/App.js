@@ -42,7 +42,8 @@ function App() {
 
   return (
   
-    <div style={{background: "gray"}}>
+    <div >
+      {/* style={{background: "gray"}} */}
       <Navbar/>
       <div style={{display: "flex",}}>
         <div>
