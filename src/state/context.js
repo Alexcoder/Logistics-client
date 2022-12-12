@@ -11,12 +11,6 @@ const AuthInitialState={
     bio: "",
     isAdmin: false
 }
-// const VehicleInitialState={
-//     departureTerminal: "",
-//     arrivalTerminal: "",
-//     seat: [],
-//     price: "",
-// }
 const FormatDate = (date)=>{
     const d = new Date(date);
     const day = `${d.getDate()}`
@@ -24,11 +18,9 @@ const FormatDate = (date)=>{
     const year = d.getFullYear()
 
     return (
-      [month, day,year].join("-")
+      [year, month, day].join("-")
     )
   }
-
-
 
 
 export const StateContext = createContext();
@@ -60,7 +52,6 @@ export const CreateContext=({children})=>{
     seat: [],
     price: "",
 })
-console.log(BookInitialState.date)
  
     useEffect(()=>{
         JSON.parse(localStorage.getItem("profile"))
@@ -74,7 +65,7 @@ console.log(BookInitialState.date)
           bookDetail, setBookDetail, API, mainSidebar, setMainSidebar,
           createAccount, setCreateAccount, selectedSeatId, setSelectedSeatId,
           AuthInitialState, booking, setBooking,trip, setTrip,currentId, setCurrentId,
-          navDropDown, setNavDropDown, FormatDate: FormatDate()
+          navDropDown, setNavDropDown, FormatDate: FormatDate(new Date())
         }}>
             {children}
         </StateContext.Provider>

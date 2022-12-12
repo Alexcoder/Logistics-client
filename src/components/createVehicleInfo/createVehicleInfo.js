@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useGlobalState } from "../../state/context";
 import { adminCreateVehicle, adminDeleteVehicleInfo,adminUpDateVehicleInfo } from "../actions/actions";
+import "./createVehicleInfo.css";
 
 const CreateVehicleInfo=()=>{ 
     const {error, }= useSelector((state)=> state.auth)
@@ -97,26 +98,28 @@ const CreateVehicleInfo=()=>{
         </div>
         
         {Loading? "Fetching Vehicle Details..," :
-        <div style={{display: "grid", gap:"1rem", gridTemplateColumns:"repeat(4, 1fr)", border:"1px solid gray"}}>
+        <div className="adminVehicleInfo">
         {allPosts?.map((p, i)=>(
           <div key={i} style={{border: "1px solid gray"}}>
-            <div>departure Terminal : {p.departureTerminal}</div>
-            <div>arrival Terminal : {p.arrivalTerminal}</div>
-            <div>{p.price}</div>
+            <div>From : {p.departureTerminal}</div>
+            <div>To : {p.arrivalTerminal}</div>
+            <div>NGN {Intl.NumberFormat().format(p.price)}</div>
             <div style={{display:"flex"}}>
-              seat Number :
+              seat Number(s):
             {p.seatNumber.map((t,i)=>
             <div key={i}>
              <div>{t.number},</div>
              </div>
             )}
             </div>
+            <p className="buttonParent">
             <button 
             onClick={()=> dispatch(adminDeleteVehicleInfo(p._id))}
-            className="delete" style={{border: "1px solid gray"}}>delete</button>
+            className="delete">delete</button>
             <button 
             onClick={()=> {setCurrentId(p._id)}}
-            className="delete" style={{border: "1px solid gray"}}>Update</button>
+            className="update" style={{border: "1px solid gray"}}>Update</button>
+            </p>
           </div>
         ))}
         </div>

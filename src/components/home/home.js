@@ -10,7 +10,7 @@ import './home.css'
 
 const Home=()=>{
     const {welcome,}= useSelector((state)=> state.auth)
-    const { bookDetail, setBookDetail, user,booking, setBooking,trip, setTrip, FormatDate }= useGlobalState();
+    const { bookDetail, setBookDetail, user,booking, setBooking,trip, setTrip, FormatDate}= useGlobalState();
     const { departureTerminal,arrivalTerminal, adults, date}= bookDetail;
     
     const navigate = useNavigate()
@@ -54,7 +54,7 @@ const Home=()=>{
         }
     }
     
-
+console.log({"current date": date, });
     return(
         <div className="homeContainer" >
             {welcome && <h1 style={{colour: "blue", margin:"1rem 0rem 1 rem 2rem"}}>{welcome}</h1>}
@@ -121,7 +121,7 @@ const Home=()=>{
             <div style={{display: "flex", gap:"1.1rem", color:"white"}}>
             <div style={{display: "flex", flexDirection:"column"}}>
              <span style={{margin:"0rem 0rem 0rem 1rem"}}>Date</span>
-            <input type="date" className="date" placeholder={FormatDate}
+            <input type="date" className="date" min={FormatDate}
              name="date" value={date} onChange={handleChange}/>
             </div>
             <div style={{display: "flex", flexDirection:"column"}}>
