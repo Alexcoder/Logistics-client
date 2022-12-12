@@ -14,7 +14,6 @@
  background: white;
 }
 .buttonParent{
-    /* text-align: center; */
     padding: 1rem 2rem 0rem 2rem;
 }
 .delete{
@@ -33,11 +32,21 @@
     color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
+    .adminVehicleInfo{
+        grid-template-columns: repeat(1, 1fr);
+        max-height: 40rem;
+        overflow: auto;
+        margin-left: 7rem;
+       }       
+    
+}
+@media screen and (max-width: 620px) {
     .adminVehicleInfo{
         grid-template-columns: repeat(1, 1fr);
         max-height: 35rem;
         overflow: auto;
+        margin-left: 2.2rem;
        }       
     
 }

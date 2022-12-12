@@ -2,6 +2,7 @@ import CreateVehicleInfo from "./createVehicleInfo/createVehicleInfo";
 import Home from "./home/home";
 import Login from "./login/login";
 import Navbar from "./navbar/navbar";
+import NavSmall from "./navbar/navSmall";
 import Sidebar from "./sidebar/sidebar";
 import SelectBus from "./selectBus/selectBus";
 import SelectSeat from "./selectSeat/selectSeat";
@@ -14,6 +15,7 @@ export{
     Home, 
     Login, 
     Navbar, 
+    NavSmall, 
     Sidebar, 
     SelectBus, 
     SelectSeat, 

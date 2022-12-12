@@ -2,9 +2,9 @@ import React, {useEffect} from "react";
 import {useGlobalState} from './state/context';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import {useDispatch } from "react-redux";
-import {Home, CreateVehicleInfo, Login, Navbar, Sidebar, SelectBus, SelectSeat, Pay, AllBookings,UserBooking} from './components/index';
+import {Home, CreateVehicleInfo, Login, Navbar, Sidebar, SelectBus, SelectSeat, Pay, AllBookings,UserBooking, NavSmall} from './components/index';
 import {adminGetAllVehicleInfo, adminGetVehicleQuery, getOneBookedInfo,getAllBookedInfo} from "./components/actions/actions";
-
+import './App.css';
 
 function App() {
   const {user, mainSidebar, creator}  = useGlobalState();
@@ -43,7 +43,8 @@ function App() {
   return (
   
     <div >
-      <Navbar/>
+      <div className="largeDevice"> <Navbar /> </div>  
+      <div className="smallDevice"> <NavSmall /> </div>  
       <div style={{display: "flex",}}>
         <div>
           {

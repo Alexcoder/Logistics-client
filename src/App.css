@@ -1,3 +1,5 @@
+
+
 .App {
   text-align: center;
 }
@@ -27,12 +29,28 @@
 .App-link {
   color: #61dafb;
 }
+.largeDevice{
+  display: grid;
+}
+.smallDevice{
+  display: none;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@media screen and (max-width: 1024px) {
+  .largeDevice{
+    display: grid;
   }
-  to {
-    transform: rotate(360deg);
+  .smallDevice{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .largeDevice{
+    display: none;
+  }
+  .smallDevice{
+    display: grid;
   }
 }

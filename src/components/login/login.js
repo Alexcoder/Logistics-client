@@ -4,6 +4,7 @@ import { useGlobalState } from "../../state/context";
 import { useDispatch, useSelector } from "react-redux";
 import { register, signIn } from "../actions/actions";
 import { useNavigate } from "react-router-dom";
+import './login.css';
 
 
 const Login=()=>{ 
@@ -24,15 +25,16 @@ const Login=()=>{
     return(
       <div className="lContainer">
 
-       <Grid container gap={1} ml={0.5} mt={2}>
+       <Grid container gap={1} ml={0.5} p={4} 
+       sx={{border: "1px solid gray",
+       borderRadius: "0.5rem",
+       boxShadow: "1px 0px 0.5rem 0px gray"
+      }}>
 
         {Loading && "Loading..."}
 
        <Grid item xs={12} sm={12} md={12}>
         <TextField
-         sx={{
-          // margin: "3rem 0rem 0rem 0.5rem"
-         }}
          id="email" 
          label="email *"
          type="email *"
@@ -42,9 +44,6 @@ const Login=()=>{
          </Grid>
        <Grid item xs={12} sm={12} md={12}>
         <TextField
-         sx={{
-          // margin: "3rem 0rem 0rem 0.5rem"
-         }}
          id="password" 
          label="password *"
          type="password"
@@ -57,9 +56,6 @@ const Login=()=>{
         <>
        <Grid item xs={12} sm={12} md={12}>
         <TextField
-         sx={{
-          // margin: "3rem 0rem 0rem 0.5rem"
-         }}
          id="confirm password" 
          label="confirm password *"
          type="password"
@@ -113,8 +109,8 @@ const Login=()=>{
          onClick={handleAuth}
          variant="contained"
          sx={{
-          width:"32%",
-          marginTop:"0.4rem",
+          width:"70%",
+          marginTop:"1rem",
         }}
          >{createAccount? "CREATE ACCOUNT": "SIGN IN"}
          </Button>
@@ -122,7 +118,7 @@ const Login=()=>{
         <Grid item xs={12} sm={12} md={12}>
          <Button
          onClick={()=>setCreateAccount((prev)=> !prev)}
-         sx={{width:"30%"}}
+         sx={{width:"60%"}}
          >{!createAccount? "CREATE ACCOUNT": "CLICK TO SIGN IN"}
          </Button>
         </Grid>

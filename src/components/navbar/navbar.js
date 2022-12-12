@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {BiMenu} from 'react-icons/bi'
 import {AiOutlineHome} from 'react-icons/ai'
-// import {AiOutlineSearch} from 'react-icons/ai'
 import {AiOutlineCaretDown} from 'react-icons/ai'
 import './navbar.css';
 import { useGlobalState } from '../../state/context';

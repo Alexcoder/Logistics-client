@@ -1,18 +1,23 @@
 .lContainer{
-    width: 100%;
-    height: 100%;
     text-align: center;
     justify-content: center;
+    width: 20rem;
     align-items: center;
-    position:fixed;
-    bottom:0;
-    left:0
-}
-.lContainer >div{
-    position:fixed;
-    bottom:0;
-    left:0
+    margin-top: 5rem;
 }
 .toggleButtons{
     display: flex;
+}
+
+@media screen  and (max-width:1024px){
+    .lContainer{
+        margin-top: 9rem;
+        margin-left: 12rem;
+    }    
+}
+@media screen  and (max-width:620px){
+    .lContainer{
+        margin-top: 12rem;
+        margin-left: 2.8rem;
+    }    
 }
