@@ -69,7 +69,7 @@ const updateSeat= async()=>{
         const {data} = await Promise.all(
             selectedSeatId?.map((seatId)=>{
              return(
-             axios.put(`http://localhost:5000/api/addDate/${seatId}`, {date})
+             axios.put(`https://logistics-api.onrender.com/api/addDate/${seatId}`, {date})
             )})
             )
             navigate(`/userBooking`)
