@@ -60,7 +60,7 @@ const CreateVehicleInfo=()=>{
 
     return(
       <div >
-        <div style={{marginTop:"3rem"}}>
+        <div style={{marginTop:"5rem",}}>
           <div style={{display:"grid", gap:"0.3rem", width:"15rem", margin:"1rem 0rem 0rem 2rem",
            border:"1px solid gray", padding:"0.5rem",
            background: "linear-gradient(to bottom right, blue, brown)",

@@ -18,11 +18,11 @@ background-image: url('../../images/GIG.png');
      height: 3rem; 
      border: 1px solid gray;
      color: white;
-     width: 30rem; 
+     width: 27rem; 
      margin: 1rem 0rem 0.2rem 1rem;   
 }
 .adults_select, .date_home{
-    width: 14rem;
+    width: 13rem;
     margin: 0.5rem 0rem 0rem 0rem;
     background: transparent;
     border: 0.2px solid rgb(161, 159, 159);
