@@ -7,7 +7,7 @@ import {adminGetAllVehicleInfo, adminGetVehicleQuery, getOneBookedInfo,getAllBoo
 import './App.css';
 
 function App() {
-  const {user, mainSidebar, creator}  = useGlobalState();
+  const {user, mainSidebar, setMainSidebar, creator}  = useGlobalState();
   const dispatch = useDispatch();
 
 
@@ -45,7 +45,7 @@ function App() {
     <div >
       <div className="largeDevice"> <Navbar /> </div>  
       <div className="smallDevice"> <NavSmall /> </div>  
-      <div style={{display: "flex",}}>
+      <div style={{display: "flex",}} onClick={()=> setMainSidebar(false)}>
         <div>
           {
             mainSidebar ? <Sidebar/> : null

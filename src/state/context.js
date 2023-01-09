@@ -17,8 +17,10 @@ const FormatDate = (date)=>{
     const month = `${d.getMonth() + 1}`
     const year = d.getFullYear()
 
+    const day_changer = day.length<2 ? `0${d.getDate()}` : `${d.getDate()}`
+    const month_changer = month.length<2 ? `0${d.getMonth()+1}` : `${d.getMonth()+1}`
     return (
-      [year, month, day].join("-")
+      [year, month_changer, day_changer].join("-")
     )
   }
 

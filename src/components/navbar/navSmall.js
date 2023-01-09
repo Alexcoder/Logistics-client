@@ -2,7 +2,8 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import {BiMenu} from 'react-icons/bi'
 import {AiOutlineHome} from 'react-icons/ai'
-import './navSmall.css';
+// import './navSmall.css';
+import './navbar.css';
 import { useGlobalState } from '../../state/context';
 
 const NavSmall =()=>{ 

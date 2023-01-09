@@ -54,11 +54,10 @@ const Home=()=>{
         }
     }
     
-console.log({"current date": date, });
     return(
         <div className="homeContainer" >
             {welcome && <h1 style={{colour: "blue", margin:"1rem 0rem 1 rem 2rem"}}>{welcome}</h1>}
-         <div style={{display: "flex", gap:"4rem"}}>
+         <div>
             <div 
             style={{
                 margin:"12rem 0rem 0rem 1rem", 
@@ -99,7 +98,7 @@ console.log({"current date": date, });
             </div>
              
              <span style={{margin:"3rem 0rem 0rem 1rem",}}> Travelling From</span>
-            <select type="string" style={{background:"inherit", borderRadius:"0.5rem",height:"3rem", border:"1px solid gray",color:"white",width: "30rem", margin: "1rem 0rem 0.2rem 1rem"}}
+            <select className="travellingFrom" type="string"
             label="Departure Terminal" name="departureTerminal" value={departureTerminal} onChange={handleChange}>
                 <option >Departure Terminal</option>
                 {bookUtils.map((travel,i)=>(
@@ -107,8 +106,8 @@ console.log({"current date": date, });
                 ))}
                 {/* <hr/> */}
             </select>
-            <span style={{margin:"3rem 0rem 0rem 1rem",}}> Travelling To</span>
-            <select type="string" style={{background:"inherit", borderRadius:"0.5rem",height:"3rem",color:"white", border:"1px solid gray",width: "30rem", margin: "0.5rem 0rem 0.2rem 1rem"}}
+            <span style={{margin:"3rem 0rem 0rem 1.36rem",}}> Travelling To</span>
+            <select className="travellingTo" type="string"
             label="Arrival Terminal" name="arrivalTerminal" value={arrivalTerminal} onChange={handleChange}>
                 <option >Arrival Terminal</option>
                 { departureTerminal? 
@@ -121,25 +120,37 @@ console.log({"current date": date, });
             <div style={{display: "flex", gap:"1.1rem", color:"white"}}>
             <div style={{display: "flex", flexDirection:"column"}}>
              <span style={{margin:"0rem 0rem 0rem 1rem"}}>Date</span>
-            <input type="date" className="date" min={FormatDate}
-             name="date" value={date} onChange={handleChange}/>
+            <input 
+             className="date_home" 
+             type="date" 
+             min={FormatDate}
+            //  min={"2023-01-11"}
+             name="date" 
+             value={date} 
+             onChange={handleChange}/>
             </div>
             <div style={{display: "flex", flexDirection:"column"}}>
              <span style={{margin:"0rem 0rem 0rem 1rem"}}>Adults</span>
-            <select type="number" className="adults"
-            label="Adult" name="adults" value={adults} onChange={handleChange}>
+            <select 
+            className="adults_select"
+            type="number" 
+            label="Adult" 
+            name="adults" 
+            value={adults} 
+            onChange={handleChange}>
                 {
                     Adults.map((p, i)=>(
-                        <option  key={i} value={p.number}>{p.number}</option>
+                        <option style={{color:"black"}} key={i} value={p.number}>{p.number}</option>
                         )) 
                     }
             </select>
             </div>
           </div>
             
-            <Grid>
-            <Button variant="contained"
-            sx={{margin: "1rem 0rem 1rem 1rem", width: "30rem"}}
+            <Grid sx={{textAlign: "center"}}>
+            <Button 
+            variant="contained"
+            sx={{margin: "1rem 0rem 1rem 1rem", width:{md:"15rem",sm:"90%", xs: "60%"} }}
             onClick={handleProceed}>
                 Proceed
             </Button>

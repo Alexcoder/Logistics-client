@@ -1,12 +1,62 @@
-
+.homeContainer{
+    width: 100vw;
+}
 
 .homeContainer> div{
-/* background-image: url(https://enlightphoto.com/wp-content/uploads/2020/09/ssku-2113_1200.jpg); */
 background-image: url('../../images/GIG.png');
-/* background-image: url(https://images.unsplash.com/photo-1519817914152-22d216bb9170?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHJvYWR8ZW58MHx8MHx8&w=1000&q=80); */
- /* background: linear-gradient(rgba(0, 0, 0, 0.600), black); */;
  background-color: #cccccc;
  background-position: center; /* Center the image */
  background-repeat: no-repeat; /* Do not repeat the image */
  background-size: cover; 
+
+ display:flex;
+ gap: 3rem;
+}
+.travellingFrom , .travellingTo{
+     background: inherit; 
+     border-radius: 0.5rem;
+     height: 3rem; 
+     border: 1px solid gray;
+     color: white;
+     width: 30rem; 
+     margin: 1rem 0rem 0.2rem 1rem;   
+}
+.adults_select, .date_home{
+    width: 14rem;
+    margin: 0.5rem 0rem 0rem 0rem;
+    background: transparent;
+    border: 0.2px solid rgb(161, 159, 159);
+    border-radius: 0.5rem;
+    height: 2.9rem;
+    color: white
+}
+.date_home{
+    margin-left: 1rem;
+}
+
+
+@media screen and (max-width: 1240px) {
+    /* .homeContainer{
+        width: 100%;
+    } */
+    .homeContainer> div{
+         flex-direction: column;
+         gap: 0.5rem;
+         width: 100vw;
+        }
+        .travellingFrom, .travellingTo{
+            width: 90%; 
+       }
+}
+@media screen and (max-width: 600px) {
+    .homeContainer{
+        margin-top: -4rem;
+    }
+    
+       .adults_select{
+        width: 100%;
+    }
+    .date_home{
+        width: 90%;
+    }
 }
