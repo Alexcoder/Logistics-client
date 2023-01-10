@@ -72,7 +72,7 @@ const SelectBus =()=>{
 
 
     return(
-        <div style={{display:"flex", gap:"3rem", padding:"2rem 0rem 0rem 0rem"}}>
+        <div className="selectBusContainer">
             <div>
                 <img src={GIG2} alt={"BUS"} style={{padding: "1rem 1rem 0rem 2rem"}}/>
             </div>

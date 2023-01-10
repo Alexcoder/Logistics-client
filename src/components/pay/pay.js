@@ -1,4 +1,3 @@
-// import { useState, useEffect } from "react";
 import { useDispatch,  } from "react-redux";
 import { useLocation, useNavigate, } from "react-router-dom";
 import { useGlobalState } from "../../state/context";
@@ -13,7 +12,6 @@ const Pay =()=>{
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const {user,}=useGlobalState()
-    // const {Loading}= useSelector((state)=> state.posts)
 
 
     const date = location.state.date;
@@ -82,8 +80,8 @@ const updateSeat= async()=>{
 
 
     return(
-        <div style={{margin:"4rem 0rem 0rem 2rem",}}>
-            <div style={{display:"grid", gap:"0.3rem", opacity:"0.8", border: "0.4px solid lightgray", width:"110%", borderRadius:"0.4rem", background: "lightGreen", padding:"0rem 1rem 2rem 1rem"}}>
+        <div className="payContainer">
+            <div >
                 <p style={{textAlign:"center", fontSize:"1.6rem", fontWeight:"500", marginBottom:"1rem"}}>Trip Summary</p>
                 <div style={{display:"flex", gap: "8.8rem"}}>
                     <span>From</span>
@@ -118,7 +116,7 @@ const updateSeat= async()=>{
                 </div>
                 <div style={{display:"flex", gap: "9rem"}}>
                     <span>Price</span>
-                    <span>NGN {Intl.NumberFormat().format(price)}.00</span>
+                    <span>&#8358; {Intl.NumberFormat().format(price)}.00</span>
                 </div>
                 <div style={{display:"flex", gap: "8rem"}}>
                     <span>Discount</span>
@@ -126,7 +124,7 @@ const updateSeat= async()=>{
                 </div>
                 <div style={{display:"flex", gap: "5rem"}}>
                     <span  style={{marginTop:"0.3rem"}}>Total Amount</span>
-                    <span style={{fontSize:"1.4rem", fontWeight:"500"}}>NGN {Intl.NumberFormat().format(price*adults)}.00</span>
+                    <span style={{fontSize:"1.4rem", fontWeight:"500"}}>&#8358; {Intl.NumberFormat().format(price*adults)}.00</span>
                 </div>
              <button
              onClick={()=> {Payment(); Booking(); updateSeat()}}

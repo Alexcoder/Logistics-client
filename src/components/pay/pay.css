@@ -1,0 +1,36 @@
+.payContainer{
+  margin: 4rem 0rem 0rem 2rem;   
+}
+.payContainer > div{
+        display: grid; 
+        gap: 0.3rem; 
+        opacity: 0.8; 
+        border:  0.4px solid lightgray;
+        width: 110% ;
+        border-radius: 0.4rem; 
+        background:  lightGreen; 
+        padding: 0rem 1rem 2rem 1rem;   
+}
+
+@media screen and (max-width: 1024px) {
+    .payContainer > div{
+        width: 110% ;
+        margin: 30% 0rem 0rem 60%;
+        padding: 0rem 1rem 2rem 1rem;   
+    }
+}
+@media screen and (max-width: 620px) {
+    .payContainer > div{
+        width: 100% ;
+        margin: 30% 0rem 0rem 5%;
+        padding: 0rem 1rem 2rem 0.8rem;   
+}
+}
+@media screen and (max-width: 290px) {
+    .payContainer > div{
+        max-width: 80% ;
+        overflow: auto;
+        margin: 30% 0rem 0rem 1%;
+        padding: 0rem 1rem 2rem 0.8rem;   
+}
+}
