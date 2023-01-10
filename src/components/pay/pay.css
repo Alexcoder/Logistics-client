@@ -20,6 +20,10 @@
     }
 }
 @media screen and (max-width: 620px) {
+    .payContainer{
+        margin: 4rem 0rem 0rem 1rem;   
+      }
+      
     .payContainer > div{
         width: 100% ;
         margin: 30% 0rem 0rem 5%;
@@ -27,6 +31,9 @@
 }
 }
 @media screen and (max-width: 290px) {
+    .payContainer{
+        margin: 4rem 0rem 0rem 1rem;   
+      }
     .payContainer > div{
         max-width: 80% ;
         overflow: auto;
