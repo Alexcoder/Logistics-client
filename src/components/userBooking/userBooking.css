@@ -1,0 +1,33 @@
+.userBooking{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top:7rem;
+}
+.userTopic{
+    position: fixed;
+    top:4.2rem;
+    width: 92%;
+    z-index: 300;
+    background: blue;
+    color: white;
+    display: flex;
+    gap:5rem;
+    padding: 1rem;
+}
+.userContainer{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap:0.1rem;
+}
+.userBody{
+    display: flex;
+    gap:4rem;
+    border: 0.5px solid lightgray;
+    padding: 1rem;
+    width:100%;
+    border-radius: 0.2rem;
+    background: white;
+
+}

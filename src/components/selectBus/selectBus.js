@@ -8,6 +8,7 @@ import {adminGetVehicleQuery } from '../actions/actions';
 import {IoIosArrowBack} from 'react-icons/io'
 import GIG2 from '../../images/GIG2.png'
 import './selectBus.css';
+// import { Adults } from "../home/utils_home";
 
 
 
@@ -46,6 +47,7 @@ const SelectBus =()=>{
       }
 
      const ReserveSeat = (vehicle)=>{
+       if(selectedSeatNumber.length>=adults){
         navigate(`/pay`, 
         {state:{
              date ,
@@ -58,6 +60,9 @@ const SelectBus =()=>{
              selectedSeatId,
              selectedSeatNumber,
         }})
+      }else{
+        return null
+      }
       }
 
       const unAvailableDate = (booking) =>{
