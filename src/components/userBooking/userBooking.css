@@ -31,3 +31,26 @@
     background: white;
 
 }
+@media screen and (max-width:1024px) {
+    .userBody, .userTopic{
+        max-width: 95vw;
+        overflow: auto;
+    } 
+    .userTopic{
+        gap:3.7rem;
+    }
+    
+    
+}
+@media screen and (max-width:620px) {
+    .userBody, .userTopic{
+        max-width: 80vw;
+        overflow: auto;
+    } 
+    .userTopic{
+        gap:4rem;
+        padding: 1rem 2rem;
+    }
+
+    
+}
