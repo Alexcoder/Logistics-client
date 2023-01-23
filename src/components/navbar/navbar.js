@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import {BiMenu} from 'react-icons/bi'
+// import {BiMenu} from 'react-icons/bi'
+import MenuIcon from '@mui/icons-material/Menu';
 import {AiOutlineHome} from 'react-icons/ai'
 import {AiOutlineCaretDown} from 'react-icons/ai'
 import './navbar.css';
@@ -22,14 +23,14 @@ const Navbar =()=>{
             <div>
                 <div>
                     {user?.id ? 
-                    <button 
+                    <div 
                     onClick={()=> setMainSidebar((prev)=>!prev)}
-                    style={{margin:"0.3rem 0rem 0rem 0rem"}}> 
-                       <BiMenu style={{color:"black"}}/>
-                       </button> : null
+                    style={{margin:"0.3rem 0rem 0rem 0rem", }}> 
+                       <MenuIcon sx={{color:"black",fontSize:"2rem"}}/>
+                       </div> : null
                     }
-                    <button style={{margin:"0rem 8rem 0rem 1rem", color:"black",}}>
-                    <AiOutlineHome /></button>
+                    <div style={{margin:"0rem 8rem 0rem 1rem", color:"black",}}>
+                    <AiOutlineHome /></div>
                     <button style={{margin:"0rem 7rem 0rem 3rem", color:"black", fontWeight:"500"}}> Anyi Booking</button>
                  </div>
 
@@ -69,14 +70,6 @@ const Navbar =()=>{
                     </div>
                     <div style={{fontWeight:"420"}}> Suggest Route </div>
 
-                    {/* <input 
-                       style={{
-                       width:"8rem",
-                       border: "1px solid black",
-                       margin: "0rem 3rem 0rem 0rem",
-                       borderRadius: "0.2rem",
-                      }} 
-                      placeholder="search"/> */}
                  {user?.id ?
                   <button 
                   className="navBotton" 

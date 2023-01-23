@@ -9,7 +9,7 @@
     position: fixed;
     top:4.2rem;
     width: 92%;
-    z-index: 300;
+    z-index: 50;
     background: blue;
     color: white;
     display: flex;

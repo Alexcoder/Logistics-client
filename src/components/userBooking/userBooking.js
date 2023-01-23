@@ -1,10 +1,8 @@
 import React from 'react';
 import { useSelector} from 'react-redux';
-// import { useGlobalState, } from '../../state/context';
 import './userBooking.css';
 
 const UserBooking = () => {
-    // const {mainSidebar} = useGlobalState()
     const {singleBooking, Loading} = useSelector((state)=> state.booking)
 
 
