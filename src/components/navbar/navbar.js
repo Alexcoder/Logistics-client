@@ -20,21 +20,21 @@ const Navbar =()=>{
 
     return(
         <div id="navBarContainer">
-            <div>
-                <div>
+                <div className="navMenuCont">
                     {user?.id ? 
-                    <div 
-                    onClick={()=> setMainSidebar((prev)=>!prev)}
-                    style={{margin:"0.3rem 0rem 0rem 0rem", }}> 
+                     <div 
+                       onClick={()=> setMainSidebar((prev)=>!prev)}
+                       style={{flex:"", }}> 
                        <MenuIcon sx={{color:"black",fontSize:"2rem"}}/>
                        </div> : null
                     }
-                    <div style={{margin:"0rem 8rem 0rem 1rem", color:"black",}}>
-                    <AiOutlineHome /></div>
-                    <button style={{margin:"0rem 7rem 0rem 3rem", color:"black", fontWeight:"500"}}> Anyi Booking</button>
-                 </div>
+                    <div style={{fontSize:"2rem", color:"black",}}>
+                    <AiOutlineHome />
+                    </div>
+                    <button style={{ color:"black", fontWeight:"500"}}> ANYI BOOKING SERVICES</button>
+                </div>
 
-                 <div style={{margin:"0rem 0rem 0rem 0rem", display:"flex"}}>
+                 <div style={{ display:"flex"}}>
                   <div style={{display:"flex", gap:"2rem"}}>
                     <div>
                       <button 
@@ -42,24 +42,24 @@ const Navbar =()=>{
                       onMouseLeave={()=> setNavDropDown("")} 
                       className="dropButton"
                       >Move Freely 
-                      <span style={{marginTop:"0.2rem"}}>
+                      <span style={{marginTop:"0.4rem"}}>
                         <AiOutlineCaretDown/>
                       </span>
                      </button>
                       <div  className="dropBox">
 
-                          <>
+                          {/* <> */}
                         <button>Pick up Service</button>
                         <button>Hire a Bus</button>
-                          </>
+                          {/* </> */}
                       </div>
                     </div>
                     <div >
                       <button 
-                      className="dropButton"
-                      >Do Freely 
+                        className="dropButton"
+                       >Do Freely 
                       <span 
-                      style={{marginTop:"0.2rem"}}>
+                      style={{marginTop:"0.4rem"}}>
                         <AiOutlineCaretDown/>
                         </span>
                         </button>
@@ -78,7 +78,6 @@ const Navbar =()=>{
                   </button> : null}     
                   </div>
                 </div>
-            </div>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {useGlobalState} from './state/context';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import {useDispatch } from "react-redux";
-import {Home, CreateVehicleInfo, Login, Navbar, Sidebar, SelectBus, SelectSeat, Pay, AllBookings,UserBooking, NavSmall} from './components/index';
+import {Home, CreateVehicleInfo, Login, Navbar, Sidebar, SelectBus,Pay, AllBookings,UserBooking} from './components/index';
 import {adminGetAllVehicleInfo, adminGetVehicleQuery, getOneBookedInfo,getAllBookedInfo} from "./components/actions/actions";
 import './App.css';
 
@@ -44,7 +44,6 @@ function App() {
   
     <div >
       <div className="largeDevice"> <Navbar /> </div>  
-      <div className="smallDevice"> <NavSmall /> </div>  
       <div style={{display: "flex",}} onClick={()=> setMainSidebar(false)}>
         <div>
           {
@@ -60,7 +59,6 @@ function App() {
          <Route path="/allBookings" element={<AdminRoute><AllBookings/></AdminRoute>}/>
          <Route path="/userBooking" element={<ProtectedRoute><UserBooking/></ProtectedRoute>}/>
          <Route path="/select-bus" element={<ProtectedRoute><SelectBus/></ProtectedRoute>}/>
-         <Route path="/select-seat" element={<ProtectedRoute><SelectSeat/></ProtectedRoute>}/>
          <Route path="/pay" element={<ProtectedRoute><Pay/></ProtectedRoute>}/>
 
        </Routes>

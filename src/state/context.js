@@ -39,7 +39,9 @@ export const CreateContext=({children})=>{
     
     const location = useLocation();
     const [createAccount, setCreateAccount]= useState(false)
+    const [viewSeats, setViewSeats] = useState(false)
     const [selectedSeatId, setSelectedSeatId]= useState([])
+    const [selectedSeatNumber, setSelectedSeatNumber] = useState([])
     const [mainSidebar, setMainSidebar]= useState(false)
     const [navDropDown, setNavDropDown]= useState("")
     const [currentId, setCurrentId] = useState();
@@ -66,6 +68,7 @@ export const CreateContext=({children})=>{
           user, creator, vehicleDetail, setVehicleDetail,
           bookDetail, setBookDetail, API, mainSidebar, setMainSidebar,
           createAccount, setCreateAccount, selectedSeatId, setSelectedSeatId,
+          selectedSeatNumber, setSelectedSeatNumber, viewSeats, setViewSeats,
           AuthInitialState, booking, setBooking,trip, setTrip,currentId, setCurrentId,
           navDropDown, setNavDropDown, FormatDate: FormatDate(new Date())
         }}>

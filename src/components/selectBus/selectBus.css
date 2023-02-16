@@ -1,40 +1,49 @@
 
-.selectBusContainer{
+.selectBusContainer {
     display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     gap: 3rem; 
     padding:2rem 0rem 0rem 0rem;
+    margin-top: 4rem;
+}
+.seatSelection, .seatSelection>div{
+    position: absolute;
+    display:grid; 
+    place-items: center;
+    place-content: center;
+    border: 1px solid gray;
+    z-index: 3;
+    transition: 4ms ease in;
+    margin-top: 2rem;
 }
 .seatSelection{
     top: 0;
     left:0;
-    display:grid; 
-    position: absolute;
-    grid-template-columns:repeat(3, 1fr);
-    text-align:center;
-    justify-content: center;
-    width:100vw;
-    height:100vh;
-    margin:2rem 0rem 0rem 0rem;
+    width:100%;
+    height:100%;
     background:rgba(0, 0, 0, 0.600);
-    border: 1px solid gray;
-    z-index: 3;
-    transition: 4ms ease in;
+}
+.seatSelection>div{
+    background: lime;
+    width: 30%;
+    border:  0.5px solid lightgray;
+    border-radius: 0.5rem;
+    padding: 1rem
 }
 
 .checkBox{
-    text-align: center;
-    justify-content: center;
     display: grid; 
+    place-items: center;
+    justify-content: center;
     grid-template-columns: repeat(3, 1fr);
-    width: 90%;
-    height: 80vh;
-    top: 2rem;
+    gap: 2rem;
+    width: 100%;
+    height: fit-content;
     background:  white;
-    border:  1px solid gray;
-    border-radius: 0.5rem;
-    padding:  2rem 0rem 0rem 5rem;
-    margin:  0rem 0rem 0rem 18rem;
-    position:  relative;
+    padding: 1rem;
+    border-radius:  0.3rem;
 }
 
 .viewSeats{
@@ -46,58 +55,27 @@
 }
 .reserveSeats{
     border: 1px solid gray; 
-    padding: 0.3rem;
+    padding: 0.3rem 0.5rem;
     border-radius:  0.3rem;
-    margin: 0.5rem 0rem 0rem 4rem;
-    width: 160%;
-    height: 3rem
+    margin-top: 2rem;
+    color: white;
+    background: darkred;
+    width: 80%;
 }
-.closeSeats{
-    border: 1px solid gray; 
-    padding: 0.3rem;
-    border-radius:  0.3rem;
-    margin: 6rem 0rem 0rem 0rem;
-    width: 25%;
-    height: 2rem;
-    text-align: center;
-}
+
 @media screen and (max-width: 1024px){
     .selectBusContainer{
         flex-direction: column;
-        text-align: center;
-        margin-top: 3rem;
     }
-    .viewSeats{
-        width: 50%;
-    }
-    .checkBox{
-        width: 110%;
-        height: 50%;
-        top: 20%;
-        padding:  2rem 0rem 0rem 2rem;
-        margin:  0rem 0rem 0rem 10rem;
-    }
-    .reserveSeats{
-        margin: 0.5rem 0rem 0rem 4rem;
-        width: 160%;
-        height: 3rem
-    }
-    
-    
 }
 @media screen and (max-width: 620px){
-    .checkBox{
-        width: 120%;
-        margin:  0rem 0rem 0rem 3rem;
+    .selectBusContainer{
+        margin: 10rem 2rem 1rem 2rem;
+        border: 0.5px solid lightgray;
+        padding: 0rem 0rem 1rem 0rem;
+        
     }
-    .reserveSeats{
-        margin: 0.5rem 0rem 0rem 2.2rem;
-    }
-
-}
-@media screen and (max-width: 390px){
-    .checkBox{
-        width: 120%;
-        margin:  0rem 0rem 0rem 2.4rem;
+    .seatSelection>div{
+        width: fit-content;
     }
 }

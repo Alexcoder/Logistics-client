@@ -11,7 +11,7 @@ const Pay =()=>{
     const location = useLocation();
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const {user,}=useGlobalState()
+    const {user, setSelectedSeatNumber, setSelectedSeatId}=useGlobalState()
 
 
     const date = location.state.date;
@@ -58,7 +58,9 @@ const Payment=()=>{
 
 const Booking=()=>{
     // DISPATCH BOOKING DETAILS TO USER SCHEMA IN BACK-END
-    dispatch(bookVehicle(bookingDetail))
+    dispatch(bookVehicle(bookingDetail));
+    setSelectedSeatId([]);
+    setSelectedSeatNumber([])
 }
 
 const updateSeat= async()=>{

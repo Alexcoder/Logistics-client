@@ -1,13 +1,11 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useGlobalState } from "../../state/context";
 import {adminGetVehicleQuery } from '../actions/actions';
-// import {AiOutlineRollback} from 'react-icons/ai';
-// import {IoArrowBackOutline} from 'react-icons/io'
-import {IoIosArrowBack} from 'react-icons/io'
 import GIG2 from '../../images/GIG2.png'
 import './selectBus.css';
+import ViewSeat from "./viewSeat";
 
 
 
@@ -15,59 +13,17 @@ const SelectBus =()=>{
     const location = useLocation();
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const [viewSeats, setViewSeats] = useState(false)
-    const [selectedSeatId, setSelectedSeatId] = useState([])
-    const [selectedSeatNumber, setSelectedSeatNumber] = useState([])
-    const {user,}=useGlobalState()
+    const {user, viewSeats, setViewSeats}=useGlobalState()
     const {Loading, query,}= useSelector((state)=> state.posts)
 
 
-    const date = location.state.date;
     const adults = location.state.adults;
     const arrivalTerminal = location.state.arrivalTerminal;
     const departureTerminal = location.state.departureTerminal;
     const bookingNumber = location.state.bookingNumber;
-    const creator = location.state.creator;
 
 
-     const handleOpen=()=>{
-          setViewSeats(true)                       
-     }
-
-     const handleSelectedSeat = (e)=>{
-        if(e.target.checked){
-          setSelectedSeatId([...selectedSeatId, e.target.value]);
-          setSelectedSeatNumber([...selectedSeatNumber, e.target.id]);
-        }
-        else{
-          setSelectedSeatId(selectedSeatId.filter((p)=> p !== e.target.value))
-          setSelectedSeatNumber(selectedSeatNumber.filter((p)=> p !== e.target.id));
-        }
-      }
-
-     const ReserveSeat = (vehicle)=>{
-       if(selectedSeatNumber.length>=adults){
-        navigate(`/pay`, 
-        {state:{
-             date ,
-             adults ,
-             arrivalTerminal,
-             departureTerminal,
-             bookingNumber,
-             creator ,
-             price: vehicle.price,
-             selectedSeatId,
-             selectedSeatNumber,
-        }})
-      }else{
-        return null
-      }
-      }
-
-      const unAvailableDate = (booking) =>{
-       const isFound =   booking.unAvailableDate.some((booked)=> booked.includes(date))
-       return isFound
-    }
+    const handleOpen=()=> setViewSeats(true)                       
 
 
      useEffect(()=>{
@@ -75,10 +31,11 @@ const SelectBus =()=>{
      },[dispatch, arrivalTerminal, departureTerminal])
 
 
+
     return(
         <div className="selectBusContainer">
             <div>
-                <img src={GIG2} alt={"BUS"} style={{padding: "1rem 1rem 0rem 2rem"}}/>
+                <img src={GIG2} alt={"BUS"} style={{padding: "1rem 1rem 0rem 2rem", borderRadius:"0.2rem"}}/>
             </div>
             <div style={{marginTop:"4rem"}}>
                 {
@@ -87,8 +44,8 @@ const SelectBus =()=>{
                  <div>
                  <div>SELECTION NOT FOUND</div>
                  <button
-                 onClick={()=> {navigate(`/home`)}}
-                 style={{
+                    onClick={()=> {navigate(`/home`)}}
+                    style={{
                     border:"1px solid gray", 
                     borderRadius:"0.3rem", 
                     padding:"0.5rem",
@@ -125,42 +82,12 @@ const SelectBus =()=>{
                                 View Seats
                             </button>
               {/* SEAT SELECTION */}
-              {viewSeats &&
-              <div className="seatSelection">
-                <div>
-                  <button>close</button>
-                    <div className="checkBox">
-                        {
-                        p.seatNumber.map((t)=>(
-                         <div key={t._id}>
-                          <div style={{display:"flex", gap:"0.2rem"}}>
-                           <input
-                            disabled={unAvailableDate(t)}
-                            type="checkbox"
-                            onChange={handleSelectedSeat}
-                             style={{width:"1rem"}}
-                             id={t.number} value={t._id}/>
-                             <div>{t.number}</div>
-                           </div>
-                         </div>
-                           ))
-                           } 
-                        <button 
-                        onClick={()=>ReserveSeat(p)}
-                        className="reserveSeats">Reserve Seat</button>
-                        <button
-                        onClick={()=> setViewSeats(false)}
-                        className="closeSeats"><IoIosArrowBack/></button>
-                    </div> 
-                </div> 
-              </div> 
-            //   : null
-             }
+              { viewSeats &&   <ViewSeat p={p}/> }
                 </div>
-                    ))
-                }
-            </div>
+              ))
+            }
         </div>
+    </div>
     )
 }
 
