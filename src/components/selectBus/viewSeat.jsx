@@ -70,6 +70,14 @@ const ViewSeat =({p})=>{
         setSelectedSeatNumber([])
      }
 
+     const handleBackgroungColor = (item) =>{
+      const clickedSeat = item._id;
+      const check = selectedSeatId.find((seatId)=> seatId === clickedSeat);
+       if(check) return "orange"
+       else if(unAvailableDate(item)) return "gray"
+       else return "blue"
+     }
+
 
 
 
@@ -91,7 +99,7 @@ const ViewSeat =({p})=>{
                                     onClick={()=>handleSelectedSeat(item._id, item.number)}
                                     style={
                                         {width:"3rem",
-                                         background: unAvailableDate(item)? "gray" : "blue", 
+                                         background: handleBackgroungColor(item), 
                                          color:"white", 
                                          borderRadius:"0.2rem", 
                                          padding:"0.3rem"

@@ -1,56 +1,128 @@
 .userBooking{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    margin-top:7rem;
+    display:grid;
+    width: 100vw;
+    place-content: center;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
+}
+.booking-my-booking{
+    text-align: center;
+    font-size: 2rem;
+    position: fixed;
+    top: 2; 
+    background: white; 
+    width: 95%;  
+    margin-top: 0.2rem;
+}
+.userBooking >main{
+    padding: 4rem 0.5rem 1rem 0.5rem;
+    width: fit-content;
+    border: 0.5px solid lightgray;
+    border-radius: 0.2rem;
 }
 .userTopic{
-    position: fixed;
-    top:4.2rem;
-    width: 92%;
-    z-index: 50;
     background: blue;
     color: white;
     display: flex;
-    gap:5rem;
-    padding: 1rem;
-}
-.userContainer{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap:0.1rem;
 }
 .userBody{
     display: flex;
-    gap:4rem;
-    border: 0.5px solid lightgray;
-    padding: 1rem;
-    width:100%;
-    border-radius: 0.2rem;
-    background: white;
-
+    width: 100%;
+    width: fit-content;
+    background: orange;
 }
+
+.booking-serial,
+.booking-number,
+.booking-name,
+.booking-travelling-from,
+.booking-travelling-to,
+.booking-date,
+.booking-adults,
+.booking-price,
+.booking-amount{
+border:0.1px solid lightgray;
+padding: 1rem 1rem;
+text-align: start;
+background: blue;
+}
+
+.booking-serial1,
+.booking-number1,
+.booking-name1,
+.booking-travelling-from1,
+.booking-travelling-to1,
+.booking-date1,
+.booking-adults1,
+.booking-price1,
+.booking-amount1{
+border:0.1px solid lightgray;
+padding: 1rem 1rem;
+text-align: start;
+}
+
+.booking-serial, .booking-serial1{
+    min-width: 3.3rem;
+}
+.booking-number, .booking-number1{
+    min-width: 10rem;
+}
+.booking-name, .booking-name1{
+    min-width: 8rem;
+}
+.booking-travelling-from, .booking-travelling-from1{
+    min-width: 12rem;
+}
+.booking-travelling-to, .booking-travelling-to1{
+    min-width: 12rem;
+}
+.booking-date, .booking-date1{
+    min-width: 8rem;
+}
+.booking-adults, .booking-adults1{
+    min-width: 6rem;
+}
+.booking-price, .booking-price1{
+    min-width: 7rem;
+}
+.booking-amount, .booking-amount1{
+    min-width: 8rem;
+}
+
 @media screen and (max-width:1024px) {
-    .userBody, .userTopic{
-        max-width: 95vw;
-        overflow: auto;
-    } 
-    .userTopic{
-        gap:3.7rem;
+    .userBooking {
+        padding-top: 5rem;
     }
-    
-    
+    .booking-my-booking{
+        text-align: center;
+        font-size: 2rem;
+        position: fixed;
+        top: 2; 
+        background: white; 
+        width: 90%;
+        padding: 1rem;  
+    }    
+    .userBooking >main{
+        max-width: 90%;
+        overflow: auto;
+        padding-top: 4rem;
+    }
 }
 @media screen and (max-width:620px) {
-    .userBody, .userTopic{
-        max-width: 80vw;
-        overflow: auto;
-    } 
-    .userTopic{
-        gap:4rem;
-        padding: 1rem 2rem;
+    .userBooking {
+        padding-top: 7.5rem;
     }
-
-    
+    .booking-my-booking{
+        text-align: center;
+        font-size: 2rem;
+        position: fixed;
+        top: 2; 
+        background: white; 
+        width: 90%;  
+    }    
+    .userBooking >main{
+        max-width: 90%;
+        overflow: auto;
+        padding-top: 4rem;
+    }
 }
