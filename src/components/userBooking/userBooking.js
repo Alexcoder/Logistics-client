@@ -5,7 +5,7 @@ import './userBooking.css';
 const UserBooking = () => {
     const {singleBooking, Loading} = useSelector((state)=> state.booking)
     const pageNumbers=[]
-    const postsPerPage = 10;
+    const postsPerPage = 15;
     const [background, setBackground] = useState(0)
     const [currentPage, setcurrentPage] = useState(1)
     const totalPages = Math.ceil(singleBooking.length/postsPerPage)
