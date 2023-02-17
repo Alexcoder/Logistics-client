@@ -1,7 +1,7 @@
 .userBooking{
     display:grid;
     width: 100vw;
-    place-content: center;
+    place-items: center;
     padding-top: 3.5rem;
     padding-bottom: 1rem;
 }
