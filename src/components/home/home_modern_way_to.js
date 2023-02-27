@@ -10,12 +10,12 @@ const Home_modern_way_to = () => {
         width:"100%", 
         color:"white",
         }}>
-       <p style={{fontSize:"40px", fontWeight:"900"}}>
+       <p className="modern-way-to-commute">
        The modern way to  <br/>
        commute across cities
        </p>
        <br/>
-       GIGM is an African technology powered company, <br/>
+       ANYI TRAVELS is an African technology powered company, <br/>
        providing seamless mobility services to <br/>
        commuters across Africa
     </div>

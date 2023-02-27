@@ -13,8 +13,8 @@ background-image: url('../../images/GIG.png');
  background-size: cover; 
 
  display:flex;
- /* justify-content: center;
- align-items: center; */
+ justify-content: center;
+ /* align-items: center; */
  gap: 3rem;
 }
 .travellingFrom , .travellingTo{
@@ -37,6 +37,9 @@ background-image: url('../../images/GIG.png');
 }
 .date_home{
     margin-left: 1rem;
+}
+.modern-way-to-commute{
+    font-size: 40px; font-weight :900
 }
 
 
@@ -61,4 +64,8 @@ background-image: url('../../images/GIG.png');
     .date_home{
         width: 90%;
     }
+    .modern-way-to-commute{
+        font-size: 30px; font-weight :900
+    }
+    
 }

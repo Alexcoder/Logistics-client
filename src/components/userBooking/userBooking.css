@@ -1,31 +1,46 @@
 .userBooking{
     display:grid;
     width: 100vw;
+    height: 100%;
     place-items: center;
     padding-top: 3.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
+    margin-top: 2rem;
+    /* background: black; */
+    background-image: url('../../images/GIG.png');
+    background-color: #cccccc;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; 
+
 }
 .booking-my-booking{
-    text-align: center;
-    font-size: 2rem;
     position: fixed;
+    bottom: 0;
+    text-align: center;
+    font-size: 1.5rem;
     top: 2; 
-    background: white; 
     width: 95%;  
-    margin-top: 0.2rem;
+    margin-top: 4rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.3rem;
+    /* background: gray; */
+    background-color: aquamarine;
+
 }
-.userBooking >main{
-    padding: 4rem 0.5rem 1rem 0.5rem;
+.userBooking >main{ /**/
+    padding: 1rem 0.5rem 1rem 0.5rem;
     width: fit-content;
     border: 0.5px solid lightgray;
     border-radius: 0.2rem;
+    background-color: aquamarine;
 }
-.userTopic{
+.userTopic{ /**/
     background: blue;
     color: white;
     display: flex;
 }
-.userBody{
+.userBody{/**/
     display: flex;
     width: 100%;
     width: fit-content;
@@ -91,38 +106,32 @@ text-align: start;
 
 @media screen and (max-width:1024px) {
     .userBooking {
-        padding-top: 5rem;
+        padding-top: 6rem;
+        height: 100vh;
     }
     .booking-my-booking{
-        text-align: center;
-        font-size: 2rem;
-        position: fixed;
         top: 2; 
-        background: white; 
         width: 90%;
-        padding: 1rem;  
+        padding: 0.5rem;  
     }    
     .userBooking >main{
         max-width: 90%;
         overflow: auto;
-        padding-top: 4rem;
+        padding-top: 2rem;
     }
 }
 @media screen and (max-width:620px) {
     .userBooking {
-        padding-top: 7.5rem;
+        padding-top: 4rem;
+        height: 100%;
     }
     .booking-my-booking{
-        text-align: center;
-        font-size: 2rem;
-        position: fixed;
         top: 2; 
-        background: white; 
+        /* background: white;  */
         width: 90%;  
     }    
     .userBooking >main{
         max-width: 90%;
         overflow: auto;
-        padding-top: 4rem;
     }
 }

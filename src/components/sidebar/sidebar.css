@@ -1,6 +1,7 @@
 
 #sidebarContainer{
-  margin: 4rem 17rem 0rem 0rem
+  /* margin: 4rem 17rem 0rem 0rem; */
+  margin-top: 4rem 
 }
 
 #sidebarContainer >div{
@@ -8,7 +9,7 @@
     gap: 1rem;
     height: 100vh;
     display: flex;
-    position: fixed;
+    /* position: fixed; */
     transition: width 2s;
     flex-direction: column;
     border-right: 1px solid gray;

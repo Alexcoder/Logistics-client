@@ -32,7 +32,8 @@ const Sidebar = () =>{
                 }
                 <button style={{color:"white"}} onClick={()=> {navigate(`/home`); setMainSidebar(false)}}>SELECT BUS</button>
                 <hr/>
-                <button style={{color:"white"}} onClick={()=> {navigate(`/selectBus`); setMainSidebar(false)}}>EDIT PROFILE</button>
+                <button style={{color:"white"}} onClick={()=> {navigate(`/userBooking`); setMainSidebar(false)}}>MY BOOKING</button>
+                {/* <button style={{color:"white"}} onClick={()=> {navigate(`/selectBus`); setMainSidebar(false)}}>EDIT PROFILE</button> */}
                 <hr/>
             </div>
         </div>
