@@ -38,7 +38,7 @@ const UserBooking = () => {
 
   return (
     <section className='userBooking'>
-            <div className="booking-my-booking">MY BOOKINGS</div>
+            {/* <div className="booking-my-booking">MY BOOKINGS</div> */}
         <main>
             <div className="userTopic">
                 <div className="booking-serial">#</div>

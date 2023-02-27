@@ -24,17 +24,17 @@ const Pay =()=>{
     const selectedSeatId = location.state.selectedSeatId;
     const selectedSeatNumber = location.state.selectedSeatNumber;
 
-console.log({
-    "date": date,
-    "adults": adults,
-    "departureTerminal": departureTerminal,
-    "arrivalTerminal": arrivalTerminal,
-    "bookingNumber": bookingNumber,
-    "creator": creator,
-    "price": price,
-    "selectedSeatId": selectedSeatId,
-    "selectedSeatNumber(s)": selectedSeatNumber
-});
+// console.log({
+//     "date": date,
+//     "adults": adults,
+//     "departureTerminal": departureTerminal,
+//     "arrivalTerminal": arrivalTerminal,
+//     "bookingNumber": bookingNumber,
+//     "creator": creator,
+//     "price": price,
+//     "selectedSeatId": selectedSeatId,
+//     "selectedSeatNumber(s)": selectedSeatNumber
+// });
 
 const bookingDetail ={
     creator,
@@ -85,23 +85,23 @@ const updateSeat= async()=>{
         <div className="payContainer">
             <div >
                 <p style={{textAlign:"center", fontSize:"1.6rem", fontWeight:"500", marginBottom:"1rem"}}>Trip Summary</p>
-                <div style={{display:"flex", gap: "8.8rem"}}>
+                <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>From</span>
                     <span>{departureTerminal}</span>
                 </div>
-                <div style={{display:"flex", gap: "10rem"}}>
+                <div style={{display:"flex",justifyContent:"space-between"}}>
                     <span>To</span>
                     <span>{arrivalTerminal}</span>
                 </div>
-                <div style={{display:"flex", gap: "9rem"}}>
+                <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>Date</span>
                     <span>{date}</span>
                 </div>
-                <div style={{display:"flex", gap: "9rem"}}>
+                <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>Time</span>
                     <span>{"07:45 AM"}</span>
                 </div>
-                <div style={{display:"flex", gap: "4rem"}}>
+                <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>Seat Number(s)</span>
                     <span style={{display:"flex"}}>
                         {selectedSeatNumber.map((seat, i)=>(
@@ -112,19 +112,19 @@ const updateSeat= async()=>{
                         </div>
                     ))}</span>
                 </div>
-                <div style={{display:"flex", gap: "7.5rem"}}>
+                <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>Adult(s)</span>
                     <span>{adults}</span>
                 </div>
-                <div style={{display:"flex", gap: "9rem"}}>
+                <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>Price</span>
                     <span>&#8358; {Intl.NumberFormat().format(price)}.00</span>
                 </div>
-                <div style={{display:"flex", gap: "8rem"}}>
+                <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>Discount</span>
                     <span> {Intl.NumberFormat().format(price*adults*0)}</span>
                 </div>
-                <div style={{display:"flex", gap: "5rem"}}>
+                <div style={{display:"flex", gap:"2rem",justifyContent:"space-between"}}>
                     <span  style={{marginTop:"0.3rem"}}>Total Amount</span>
                     <span style={{fontSize:"1.4rem", fontWeight:"500"}}>&#8358; {Intl.NumberFormat().format(price*adults)}.00</span>
                 </div>

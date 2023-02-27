@@ -26,12 +26,14 @@ const Login=()=>{
       <div className="lContainer">
 
        <Grid container gap={1} ml={0.5} p={4} 
-       sx={{border: "1px solid gray",
-       borderRadius: "0.5rem",
-       boxShadow: "1px 0px 0.5rem 0px gray"
+          sx={{border: "1px solid gray",
+          borderRadius: "0.5rem",
+          textAlign:"center",
+          background:"white",
+          width: {md:"30%", sm:"70%", xs:"80%"}
       }}>
 
-        {Loading && "Loading..."}
+        {Loading && "Processing..."}
 
        <Grid item xs={12} sm={12} md={12}>
         <TextField
@@ -65,9 +67,6 @@ const Login=()=>{
          </Grid>
        <Grid item xs={12} sm={12} md={12}>
         <TextField
-         sx={{
-          // margin: "3rem 0rem 0rem 0.5rem"
-         }}
          id="first Name" 
          label="first Name *"
          type="string"
@@ -77,9 +76,6 @@ const Login=()=>{
          </Grid>
        <Grid item xs={12} sm={12} md={12}>
         <TextField
-         sx={{
-          // margin: "3rem 0rem 0rem 0.5rem"
-         }}
          id="last Name" 
          label="last Name *"
          type="string"
@@ -98,7 +94,7 @@ const Login=()=>{
           style={{
           color:"red",
           textAlign:"center",
-          margin:"2rem 0rem 0rem 2rem",
+          marginTop:"2rem",
           }}>
           {error}
          </span>

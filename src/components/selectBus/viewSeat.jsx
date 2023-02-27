@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useGlobalState } from "../../state/context";
+import {TbSteeringWheel} from "react-icons/tb"
 import './selectBus.css';
 
 
@@ -36,9 +37,6 @@ const ViewSeat =({p})=>{
            setSelectedSeatId(data);
            } 
        };
-       console.log(selectedSeatId)
-       console.log(selectedSeatNumber);
- 
 
      const ReserveSeat = (vehicle)=>{
        if(selectedSeatNumber.length===Number(adults)){
@@ -85,10 +83,10 @@ const ViewSeat =({p})=>{
               <div className="seatSelection">
 
                 <div >
-                    <div onClick={handleClear} style={{justifyContent:"right"}}>X</div>
+                    <button onClick={handleClear} style={{justifyContent:"right",padding:"0.2rem 1rem", marginBottom:"0.5rem",borderRadius:"0.2rem", background:"white"}}>Back</button>
                   
                     <div className="checkBox">
-                      <div  style={{float:"right", color:"black", fontWeight:"600"}}><button>DRIVER</button></div>
+                      <div  style={{float:"right", color:"black",fontSize:"4rem", fontWeight:"600"}}><TbSteeringWheel/></div>
                       <div><button></button></div>
                         {
                           p.seatNumber.map((item)=>(

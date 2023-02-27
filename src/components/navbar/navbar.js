@@ -21,14 +21,14 @@ const Navbar =()=>{
     return(
         <div id="navBarContainer">
                 <div className="navMenuCont">
-                    {user?.id ? 
+                    {user?.id &&
                      <div 
                        onClick={()=> setMainSidebar((prev)=>!prev)}
                        style={{flex:"", }}> 
-                       <MenuIcon sx={{color:"black",fontSize:"2rem"}}/>
-                       </div> : null
+                       <MenuIcon  sx={{color:"black",fontSize:"2rem"}}/>
+                       </div> 
                     }
-                    <div style={{fontSize:"2rem", color:"black",}}>
+                    <div onClick={()=> navigate(`/`)} style={{fontSize:"2rem", color:"black",}}>
                     <AiOutlineHome />
                     </div>
                     <button style={{ color:"black", fontWeight:"500"}}> ANYI BOOKING SERVICES</button>

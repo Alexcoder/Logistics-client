@@ -1,5 +1,8 @@
 .homeContainer{
     width: 100vw;
+    display: grid;
+    place-content: center;
+    place-items: center;
 }
 
 .homeContainer> div{
@@ -10,6 +13,8 @@ background-image: url('../../images/GIG.png');
  background-size: cover; 
 
  display:flex;
+ /* justify-content: center;
+ align-items: center; */
  gap: 3rem;
 }
 .travellingFrom , .travellingTo{
@@ -36,13 +41,10 @@ background-image: url('../../images/GIG.png');
 
 
 @media screen and (max-width: 1240px) {
-    /* .homeContainer{
-        width: 100%;
-    } */
     .homeContainer> div{
          flex-direction: column;
          gap: 0.5rem;
-         width: 100vw;
+         width: 100%;
         }
         .travellingFrom, .travellingTo{
             width: 90%; 

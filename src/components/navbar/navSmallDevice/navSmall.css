@@ -1,0 +1,40 @@
+
+@media screen and (min-width: 1024px){
+    .navSmall{
+        display: none
+    }
+}
+@media screen and (max-width: 1024px){
+    .navSmall{
+        position: fixed;
+        width:100vw;
+        display: grid;
+        align-items: center;
+        place-content: center;
+        border: 1px solid lightgray;
+        background: white;
+    }
+    .navSmallCont{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0rem;
+        gap: 13rem;
+    }
+}
+@media screen and (max-width: 620px){
+    .navSmall{
+        width:100vw;
+        display: grid;
+    }
+    .navSmallCont{
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.2rem 0rem;
+        gap: 4rem;
+    }
+
+}

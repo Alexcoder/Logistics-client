@@ -6,6 +6,7 @@ import {adminGetVehicleQuery } from '../actions/actions';
 import GIG2 from '../../images/GIG2.png'
 import './selectBus.css';
 import ViewSeat from "./viewSeat";
+import { RouteProp } from "./props/route";
 
 
 
@@ -33,16 +34,16 @@ const SelectBus =()=>{
 
 
     return(
-        <div className="selectBusContainer">
-            <div>
-                <img src={GIG2} alt={"BUS"} style={{padding: "1rem 1rem 0rem 2rem", borderRadius:"0.2rem"}}/>
+        <div className="selectBusContainer" >
+            <div >
+                <img src={GIG2} alt={"BUS"} style={{padding: "1rem 1rem 0rem 2rem", borderRadius:"0.3rem"}}/>
             </div>
-            <div style={{marginTop:"4rem"}}>
+            <div className="confirmBooking">
                 {
                 Loading ? "Loading..." :
                  !query[0]? 
                  <div>
-                 <div>SELECTION NOT FOUND</div>
+                   <div>SELECTION NOT FOUND</div>
                  <button
                     onClick={()=> {navigate(`/home`)}}
                     style={{
@@ -50,6 +51,8 @@ const SelectBus =()=>{
                     borderRadius:"0.3rem", 
                     padding:"0.5rem",
                     margin:"1rem 0rem 0rem 0rem",
+                    background:"blue",
+                    color:"white",
                     width:"8rem",
                 }}
                  >
@@ -58,29 +61,26 @@ const SelectBus =()=>{
                  </div>:
                     query.map((p)=>(
                         <div key={p._id}>
-                            <div>
-                                <span
-                                 style={{color:"blue", margin:"0rem 1rem 0rem 0rem"}}>
-                                    Travelling From:
-                                </span>
-                                      {p.departureTerminal}  
-                           </div>
-                            <div>
-                                <span
-                                 style={{color:"red", margin:"0rem 1rem 0rem 0rem"}}>
-                                    Travelling To:
-                                </span>
-                                      {p.arrivalTerminal}  
-                           </div>
-                            <div>Name :  {` ${user?.firstName} ${user?.lastName}`} </div>
-                            <div> Booking Number : {bookingNumber}</div>
-                            <div>Adults(s)  :  {adults} </div>
+                            <RouteProp
+                              desc="Travelling From:"
+                              departureTerminal={p.departureTerminal}
+                              blue/>
+                            <RouteProp
+                              desc="Travelling To:"
+                              departureTerminal={p.arrivalTerminal}
+                              red/>
+                            <div style={{display:"flex",justifyContent:"space-between"}}>Name :  {` ${user?.firstName} ${user?.lastName}`} </div>
+                               <div> Booking Number : {bookingNumber}</div>
+                               <div>Adults(s)  :  {adults} 
+                            </div>
                             <div>Amount : NGN {Intl.NumberFormat().format(p.price)}.00</div>
-                            <button 
-                            className="viewSeats"
-                            onClick={handleOpen}>
+                            <div>
+                               <button 
+                                   className="viewSeats"
+                                   onClick={handleOpen}>
                                 View Seats
-                            </button>
+                               </button>
+                            </div>   
               {/* SEAT SELECTION */}
               { viewSeats &&   <ViewSeat p={p}/> }
                 </div>

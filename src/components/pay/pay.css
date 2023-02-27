@@ -1,12 +1,16 @@
 .payContainer{
-  margin: 6rem 0rem 0rem 2rem;   
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  /* place-items: center; */
+  place-content: center;
+  /* margin-top: 1rem;    */
+  background: rgb(92, 41, 41)
 }
-.payContainer > div{
-        display: grid; 
+.payContainer >div{
         gap: 0.3rem; 
         opacity: 0.8; 
         border:  0.4px solid lightgray;
-        width: 110% ;
         border-radius: 0.4rem; 
         background:  lightGreen; 
         padding: 0rem 1rem 2rem 1rem;   
@@ -14,30 +18,12 @@
 
 @media screen and (max-width: 1024px) {
     .payContainer > div{
-        width: 110% ;
-        margin: 30% 0rem 0rem 60%;
-        padding: 0rem 1rem 2rem 1rem;   
+        width: 100% ;
     }
 }
 @media screen and (max-width: 620px) {
-    .payContainer{
-        margin: 4rem 0rem 0rem 0.6rem;   
-      }
-      
     .payContainer > div{
         width: 100% ;
-        margin: 30% 0rem 0rem 5%;
-        padding: 0rem 1rem 2rem 0.8rem;   
-}
-}
-@media screen and (max-width: 290px) {
-    .payContainer{
-        margin: 4rem 0rem 0rem 1rem;   
-      }
-    .payContainer > div{
-        max-width: 90% ;
-        overflow: auto;
-        margin: 30% 0rem 0rem 1%;
-        padding: 0rem 1rem 2rem 0.8rem;   
+        margin-top: 4rem;
 }
 }
