@@ -75,7 +75,7 @@ const UserBooking = () => {
             <div style={{display:"flex", alignItems:"center", width:"fit-content", background:"white", padding:"0.2rem"}}>
             {pageNumbers.map((number, index)=>
                 <div key={index} >
-                  <div onClick={()=> {handlePage(number, index)}} style={{ border:"1px solid gray", padding:"0.5rem", color:"white", background: handleBackGround(index)}}>{number}</div>
+                  <div onClick={()=> {handlePage(number, index)}} style={{ border:"1px solid gray", padding:"0.5rem", color:"black", background: handleBackGround(index)}}>{number}</div>
                 </div>
                     )}
             <div style={{marginLeft:"2rem"}}>{`page ${currentPage} of ${totalPages}`}</div>
