@@ -17,14 +17,14 @@ const Navbar =()=>{
 
     return(
         <div className="navSmall">
-                  <div style={{ color:"black", fontWeight:"500",fontSize:"1.3rem", textAlign:"center", background:"", width:"100vw", padding:"0.5rem 0rem" }}> ANYI BOOKING SERVICES</div>
-                   <hr style={{border: "1px solid lightgray"}}/>
+                  <div className='anyi-booking-services'> ANYI BOOKING SERVICES</div>
+                   {/* <hr style={{border: "1px solid lightgray"}}/> */}
   
-                <div className="navSmallCont">
+                 <div className="navSmallCont">
                     <div onClick={()=> navigate(`/`)} style={{fontSize:"1.5rem", color:"black", display:"flex", alignItems:"center"}}>
                     <AiOutlineHome style={{color:"blue"}} /> <span style={{fontSize:"1rem", color:"black",}}>Home</span>
                     </div>
-                    {/* <div style={{ color:"black", fontWeight:"500", }}> ANYI BOOKING SERVICES</div> */}
+
                     {user?.id &&
                         <div
                         style={{fontSize:"1.5rem", color:"black", display:"flex", alignItems:"center"}}
@@ -33,10 +33,12 @@ const Navbar =()=>{
                          <span style={{fontSize:"1rem", color:"black",}}>Menu</span>
                        </div> 
                     }
+
                     <div>
                         <button onClick={logOut}>logout</button>
                     </div>
                 </div>
+
 
         </div>
     )

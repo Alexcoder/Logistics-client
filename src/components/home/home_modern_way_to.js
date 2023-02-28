@@ -1,16 +1,13 @@
 import React from 'react';
-import './home.css'
+// import './home.css'
+import './home2.css'
 
 
 const Home_modern_way_to = () => {
   return (
     <div 
-    style={{
-        margin:"12rem 0rem 0rem 1rem", 
-        width:"100%", 
-        color:"white",
-        }}>
-       <p className="modern-way-to-commute">
+    className="modern-way-to-commute">
+       <p className="modern-way-text">
        The modern way to  <br/>
        commute across cities
        </p>

@@ -1,0 +1,123 @@
+
+.homeContainer{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+}
+
+.homePic{
+background-image: url('../../images/GIG.png');
+ /* background-color: #cccccc; */
+ background-position: center; /* Center the image */
+ background-repeat: no-repeat; /* Do not repeat the image */
+ background-size: cover; 
+ width: 100vw;
+ height: 100vh;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ padding: 6rem 2rem;
+}
+
+.modern-way-to-commute{
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+}
+.modern-way-text{
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.home-input-field{
+    border:  1px solid gray;
+    width: 28rem;
+    background: rgba(0, 0, 0, 0.600);
+    border-radius: 1rem;
+    color: white;
+    margin-top: 7rem;
+}
+
+.destination-container{
+    display: flex;
+    padding: 0rem 1rem; 
+    justify-content:space-between; 
+    align-items: center; 
+    margin-bottom: 1.5rem;
+}
+
+.travellingFrom , .travellingTo{
+    background: inherit; 
+    border-radius: 0.5rem;
+    height: 3rem; 
+    border: 1px solid gray;
+    color: white;
+    width: 18rem; 
+}
+
+.adults_select, .date_home{
+    width: 10rem;
+    margin: 0.5rem 0rem 0rem 0rem;
+    background: transparent;
+    border: 0.2px solid rgb(161, 159, 159);
+    border-radius: 0.5rem;
+    height: 2.9rem;
+    /* color: gray */
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .homeContainer{
+        margin-top: 4rem;
+        width: 100vw;
+        height: 100%;
+    }
+    
+    .homePic{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    } 
+    .home-input-field{
+        width: 100%;
+        margin-top: 7rem;
+    }             
+}
+
+
+
+@media screen and (max-width: 420px) {
+    .homeContainer{
+        margin-top: 4rem;
+        width: 100%;
+        height: 100%;
+    }
+    .homePic{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }   
+    .modern-way-text{
+        font-size: 2.3rem;
+    }    
+    .homeContainer{
+        margin-top: 4rem;
+    }   
+    .home-input-field{
+        width: 100%;
+        margin-top: 7rem;
+    }             
+
+}
+
+
+
+
+
+
+
+
+

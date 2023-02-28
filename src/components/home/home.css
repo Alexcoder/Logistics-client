@@ -11,6 +11,7 @@ background-image: url('../../images/GIG.png');
  background-position: center; /* Center the image */
  background-repeat: no-repeat; /* Do not repeat the image */
  background-size: cover; 
+ width: 100vw;
 
  display:flex;
  justify-content: center;
@@ -57,6 +58,21 @@ background-image: url('../../images/GIG.png');
     .homeContainer{
         margin-top: -4rem;
     }
+    
+       .adults_select{
+        width: 100%;
+    }
+    .date_home{
+        width: 90%;
+    }
+    .modern-way-to-commute{
+        font-size: 30px; font-weight :900
+    }
+    
+}
+@media screen and (max-width: 420px) {
+    .homeContainer{
+width: 100%;    }
     
        .adults_select{
         width: 100%;
