@@ -6,6 +6,7 @@
 @media screen and (max-width: 1024px){
     .navSmall{
         position: fixed;
+        z-index: 220;
         width: 52rem;
         display: grid;
         align-items: center;
@@ -33,13 +34,13 @@
     .navSmall{
         flex-direction: column;
         justify-content: space-between;
-        width: 36rem;
+        width: 30rem;
     }
     .anyi-booking-services{
         color: black;
         font-weight: 500;
         font-size: 1.5rem; 
-        margin-left: 7rem;
+        margin-left: 4rem;
         padding: 1rem 0rem;    
     }
     .navSmallCont{
