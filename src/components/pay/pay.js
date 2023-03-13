@@ -104,13 +104,10 @@ const updateSeat= async()=>{
                 <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>Seat Number(s)</span>
                     <span style={{display:"flex"}}>
-                        {selectedSeatNumber.map((seat, i)=>(
-                        <div key={i} >
-                            <div>
-                                {seat},
-                            </div>
-                        </div>
-                    ))}</span>
+                        {
+                        selectedSeatNumber.join(",")
+                        }
+                  </span>
                 </div>
                 <div style={{display:"flex", justifyContent:"space-between"}}>
                     <span>Adult(s)</span>

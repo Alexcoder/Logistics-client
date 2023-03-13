@@ -30,7 +30,7 @@ const AllBookings = () => {
                             {
                                 user?.seat.map((seatNumber, i)=>(
                                     <div key={i}>
-                                    <div>{seatNumber},</div>
+                                    <div>{seatNumber}</div>
                                     </div>
                                     ))
                                 }

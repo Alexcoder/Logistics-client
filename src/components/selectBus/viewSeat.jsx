@@ -68,7 +68,7 @@ const ViewSeat =({p})=>{
         setSelectedSeatNumber([])
      }
 
-     const handleBackgroungColor = (item) =>{
+     const handleBackgroundColor = (item) =>{
       const clickedSeat = item._id;
       const check = selectedSeatId.find((seatId)=> seatId === clickedSeat);
        if(check) return "orange"
@@ -97,7 +97,7 @@ const ViewSeat =({p})=>{
                                     onClick={()=>handleSelectedSeat(item._id, item.number)}
                                     style={
                                         {width:"3rem",
-                                         background: handleBackgroungColor(item), 
+                                         background: handleBackgroundColor(item), 
                                          color:"white", 
                                          borderRadius:"0.2rem", 
                                          padding:"0.3rem"
