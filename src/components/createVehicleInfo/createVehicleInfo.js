@@ -65,8 +65,7 @@ const CreateVehicleInfo=()=>{
            border:"1px solid gray", padding:"0.5rem",
            background: "linear-gradient(to bottom right, blue, brown)",
            boxShadow:"0rem 0rem 10rem 2rem lightgreen",
-          maxHeight:"12rem",
-          overflow:"auto"
+          minHeight:"12rem",
             }}>
             <select name="departureTerminal" value={vehicleDetail.departureTerminal} onChange={handleChange} placeholder={"departureTerminal"}>
               {

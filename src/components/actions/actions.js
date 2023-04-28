@@ -72,6 +72,7 @@ export const bookVehicle=(VehicleInfo)=>async(dispatch)=>{
         dispatch({type:"USER_LOADING_STOP"})
     }catch(err){
         dispatch({type:"ERROR", payload: err.response.message.data});
+        console.log(err)
     }
 }
 export const getAllBookedInfo=()=>async(dispatch)=>{

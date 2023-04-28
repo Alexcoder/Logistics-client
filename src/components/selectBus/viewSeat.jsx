@@ -53,7 +53,8 @@ const ViewSeat =({p})=>{
              selectedSeatNumber,
         }})
       }else{
-        return null
+        let length = selectedSeatNumber.length
+        alert(`You selected ${length} seat${ length>1 ? "s" : ""} for ${adults} passenger${adults>1 ? "s" : ""}`)
       }
       }
 
@@ -75,8 +76,7 @@ const ViewSeat =({p})=>{
        else if(unAvailableDate(item)) return "gray"
        else return "blue"
      }
-
-
+     
 
 
     return(
