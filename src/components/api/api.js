@@ -2,18 +2,18 @@ import axios from "axios";
 
 const user = JSON.parse(localStorage.getItem("profile"))
 // const API = axios.create({baseURL: `http://localhost:5000/api` || `https://logistics-api.onrender.com/api`})
-const API = axios.create({
-    baseURL: `http://localhost:5000/api`,
-    headers: {token :`Bearer ${user.token}`},    
-})
-// const API = axios.create({baseURL: `https://logistics-api.onrender.com/api`})
 
-// API.interceptors.request.use((req)=>{
-//     if(user){
-//         req.headers.Authorization = `Bearer ${user.token}`
-//     };
-//     return req
+// const API = axios.create({
+//     baseURL: `http://localhost:5000/api`,
+//     headers: {token :`Bearer ${user.token}`},    
 // })
+const API = axios.create({baseURL: `https://logistics-api.onrender.com/api`})
+API.interceptors.request.use((req)=>{
+    if(user){
+        req.headers.Authorization = `Bearer ${user.token}`
+    };
+    return req
+})
 
 // AdminRoute
 export const adminCreateVehicle = (VehicleInfo)=> API.post(`/vehicleInfo`, VehicleInfo)
